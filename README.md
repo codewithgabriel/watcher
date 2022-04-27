@@ -11,9 +11,8 @@ Usage: ./watcher --watcher[-server , -client] 127.0.0.1 dirname
 --watcher-client     watcher as client.
 
 Param
-
 dirname		specify the directory which contains your desire files to monitor.
-
+```
 Compile watcher
 ---------------
 
@@ -29,14 +28,15 @@ note: you may delete the build directory that follow this project.
 Try this to get watcher running.
 ---------------------------------
 
-#syntax : ./watcher --watcher-server 127.0.0.1 path_to_directory # start watcher as server
-# watcher start as the server and ready to watch all events
-# happening in your specified directory such as file deleted,modified , file accessed etc.
+syntax : ./watcher --watcher-server 127.0.0.1 path_to_directory # start watcher as server
+watcher start as the server and ready to watch all events
+happening in your specified directory such as file deleted,modified , file accessed etc.
 
-# connect watcher to the server on the other end
+connect watcher to the server on the other end
 ./watcher --watcher-server 127.0.0.1 mydir 
-# the starts watcher as client and ready to log events send by thee server if connected.
+the starts watcher as client and ready to log events send by thee server if connected.
 ./watcher --watcher-client 127.0.0.1
+
 ```shell
 ./watcher --watcher-server 127.0.0.1 mydir 
 ./watcher --watcher-client 127.0.0.1  
