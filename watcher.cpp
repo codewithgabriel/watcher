@@ -3,7 +3,7 @@
 // Author      : Gabriel
 // Version     : 0.0.1
 // Copyright   : Your copyright notice
-// Description : Hello World in C++, Ansi-style
+// Description : Watcher a security system program
 //  Email      : olatoyeolaide@gmail.com
 //============================================================================
 #include <watcher.h>
