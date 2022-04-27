@@ -1,6 +1,6 @@
 Introduction
 ---------------
- Watcher is a monitoring program that monitors your file/directory as specified in directory parameter.
+ Watcher is a monitoring program that monitors your files in directory as specified in directory parameter.
 
 Quick Start
 ---------------
@@ -9,7 +9,7 @@ Usage: ./watcher --watcher[-server , -client] 127.0.0.1 dirname
 --help     display help
 --watcher-server     watcher as server.
 --watcher-client     watcher as client.
-```shellend
+
 Param
 
 dirname		specify the directory which contains your desire files to monitor.
@@ -27,7 +27,7 @@ note: you may delete the build directory that follow this project.
 
 Try this to get watcher running.
 
-```shell
+
 #syntax : ./watcher --watcher-server 127.0.0.1 path_to_directory # start watcher as server
 # watcher start as the server and ready to watch all events
 # happening in your specified directory such as file deleted,modified , file accessed etc.
@@ -35,7 +35,7 @@ Try this to get watcher running.
 ./watcher --watcher-server 127.0.0.1 mydir # connect watcher to the server on the other end
 
 
-```shellend
+
 
 
 
