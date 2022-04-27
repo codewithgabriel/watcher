@@ -40,7 +40,7 @@ Client::Client()  {
     if (rfd > 0)
         printf("+ RECV: %d bytes recv \n", rfd);
         printf("+ >> : %s \n" , buff) ;
-        printf("%s", "+ TIME");
+        printf("%s", "+ TIME : ");
         get_time();
     return *buff;
  }

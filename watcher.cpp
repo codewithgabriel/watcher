@@ -41,12 +41,14 @@ int Watcher::set_watch (int inotify_fd , const char * pathname , unsigned int fl
   watcher_server.server_st.pathname = pathname;
   watcher_server.server_st.flags = flags;
   watcher_server.server_st.watcher_fd = inotify_add_watch(inotify_fd, pathname ,  flags);
-  _inotify_fd = inotify_fd; _watcher_fd = watcher_server.server_st.watcher_fd;
+  _inotify_fd = inotify_fd;
+  _watcher_fd = watcher_server.server_st.watcher_fd;
   return watcher_server.server_st.watcher_fd;
 }
 
 int   Watcher::keep_alive(int socket_fd){
   //accept incoming new connection and read incoming packet
+  _socket_fd = socket_fd;
   watcher_server.server_st.accept_fd = watcher_server.accept_conn(socket_fd);
 
   while(watcher_server.server_st.conn_status){
@@ -182,6 +184,8 @@ int Watcher::event_handler(int inotify_fd ,const char *pathname , unsigned int f
       char event_[64] = "EVENT FILE  ACCESSED => ";
       char *msg = strcat( event_ ,  i_event->name  ) ;
       cout << msg << endl;
+      cout << "+ TIME : " ;
+      get_time();
       watcher_server.send_packet(watcher_server.server_st.accept_fd , msg);
 
 		}
@@ -189,15 +193,16 @@ int Watcher::event_handler(int inotify_fd ,const char *pathname , unsigned int f
       char event_[64] = "EVENT FILE  MODIFIED => ";
       char *msg = strcat( event_ ,  i_event->name  ) ;
       cout << msg << endl;
-
-
       watcher_server.send_packet(watcher_server.server_st.accept_fd , msg);
+      cout << "+ TIME : " ;
+      get_time();
 		}
 		if (i_event->mask & IN_CREATE) {
       char event_[64] = "EVENT FILE  CREATED => ";
       char *msg = strcat( event_ ,  i_event->name  ) ;
       cout << msg << endl;
-
+      cout << "+ TIME : " ;
+      get_time();
 
       watcher_server.send_packet(watcher_server.server_st.accept_fd , msg);
 		}
@@ -205,7 +210,8 @@ int Watcher::event_handler(int inotify_fd ,const char *pathname , unsigned int f
       char event_[26] = "EVENT FILE  OPENED => ";
       char *msg = strcat( event_ ,  i_event->name  ) ;
       cout << msg << endl;
-
+      cout << "+ TIME : " ;
+      get_time();
       watcher_server.send_packet(watcher_server.server_st.accept_fd , msg);
 
     }
@@ -213,7 +219,8 @@ int Watcher::event_handler(int inotify_fd ,const char *pathname , unsigned int f
         char event_[26] = "EVENT FILE DELETED => ";
         char *msg = strcat( event_ ,  i_event->name  ) ;
         cout << msg << endl;
-
+        cout << "+ TIME : " ;
+        get_time();
         // cout << del_msg << endl;
         watcher_server.send_packet(watcher_server.server_st.accept_fd , msg);
 
