@@ -1,0 +1,3 @@
+/home/gabriel/Documents/library/C++/workspace/watcher/watcher/build/CMakeFiles/watcher.dir
+/home/gabriel/Documents/library/C++/workspace/watcher/watcher/build/CMakeFiles/edit_cache.dir
+/home/gabriel/Documents/library/C++/workspace/watcher/watcher/build/CMakeFiles/rebuild_cache.dir
