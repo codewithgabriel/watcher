@@ -17,10 +17,11 @@ dirname		specify the directory which contains your desire files to monitor.
 Compile watcher
 ---------------
 
+```shell
 mkdir build
 cd build
 cmake .. ; make 
-
+```
 the above commands will compile watcher base on your platform and generate an executable file name 'watcher' , currently watcher only support Linux, BSD and MacOS.
 
 note: you may delete the build directory that follow this project.
@@ -32,9 +33,12 @@ Try this to get watcher running.
 # watcher start as the server and ready to watch all events
 # happening in your specified directory such as file deleted,modified , file accessed etc.
 
+# connect watcher to the server on the other end
+./watcher --watcher-server 127.0.0.1 mydir 
+# the starts watcher as client and ready to log events send by thee server if connected.
+./watcher --watcher-client 127.0.0.1
 ```shell
-./watcher --watcher-server 127.0.0.1 mydir # connect watcher to the server on the other end
-
-./watcher --watcher-client 127.0.0.1  # the starts watcher as client and ready to log events send by thee server if connected.
-
+./watcher --watcher-server 127.0.0.1 mydir 
+./watcher --watcher-client 127.0.0.1  
+```
 
