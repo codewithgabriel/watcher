@@ -26,18 +26,14 @@ the above commands will compile watcher base on your platform and generate an ex
 note: you may delete the build directory that follow this project.
 
 Try this to get watcher running.
-
+---------------------------------
 
 #syntax : ./watcher --watcher-server 127.0.0.1 path_to_directory # start watcher as server
 # watcher start as the server and ready to watch all events
 # happening in your specified directory such as file deleted,modified , file accessed etc.
 
+```shell
 ./watcher --watcher-server 127.0.0.1 mydir # connect watcher to the server on the other end
-
-
-
-
-
 
 ./watcher --watcher-client 127.0.0.1  # the starts watcher as client and ready to log events send by thee server if connected.
 
