@@ -4,12 +4,12 @@ Introduction
 
 Quick Start
 ---------------
-
+```shell
 Usage: ./watcher --watcher[-server , -client] 127.0.0.1 dirname
 --help     display help
 --watcher-server     watcher as server.
 --watcher-client     watcher as client.
-
+```shellend
 Param
 
 dirname		specify the directory which contains your desire files to monitor.
