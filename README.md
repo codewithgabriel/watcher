@@ -1,17 +1,29 @@
 Introduction
 ---------------
- Watcher is a monitoring program that monitors your file/directory as specified in dir parameter.
+ Watcher is a monitoring program that monitors your file/directory as specified in directory parameter.
 
 Quick Start
 ---------------
 
+Usage: ./watcher --watcher[-server , -client] 127.0.0.1 dirname
+--help     display help
+--watcher-server     watcher as server.
+--watcher-client     watcher as client.
+
+Param
+
+dirname		specify the directory which contains your desire files to monitor.
+
 Compile watcher
+---------------
 
 mkdir build
 cd build
 cmake .. ; make 
 
 the above commands will compile watcher base on your platform and generate an executable file name 'watcher' , currently watcher only support Linux, BSD and MacOS.
+
+note: you may delete the build directory that follow this project.
 
 Try this to get watcher running.
 
