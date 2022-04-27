@@ -1,6 +1,6 @@
 Overview
 ---------------
- Watcher is a security system program that keep eyes on your protected files located inside the directory specified in the `path_to_dir` parameter. Watcher can report to a remote network/system or local network/system all events and activies performed on this files in many cases, one good case is of cyber attacks or security breach. Current version of watcher support Unix-base and Unix-like Operating systems, Linux, MacOS and BSD to mention, efforts is ongoing for MS-DOS or Window support.
+ Watcher is a system security program that keep eyes on your protected files located inside the directory specified in the `path_to_dir` parameter. Watcher can report to a remote network/system or local network/system all events and activies performed on this files in many cases, one good case is of cyber attacks or security breach. Current version of watcher support Unix-base and Unix-like Operating systems, Linux, MacOS and BSD to mention, efforts is ongoing for MS-DOS or Window support.
  
  
 Quick Start
