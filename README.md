@@ -63,7 +63,7 @@ watcher reports user's activities in the user /home directory
  
  watcher reports which process read/write to  /tmp directory
   ```shell
- ./watcher --watcher-server 127.0.0.1 /etc
+ ./watcher --watcher-server 127.0.0.1 /tmp
  ```
 
 watch over all file system locate in the /sys/fs/dir
